@@ -1,0 +1,68 @@
+﻿@model IEnumerable<BloodBankMgmt.Models.Buyer>
+
+@{
+    ViewBag.Title = "AllBuyer";
+}
+
+<h2>All Buyer</h2>
+
+<p>
+    @Html.ActionLink("Add New Buyer Details ", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contact)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BloodGroup)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Qty)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SDate)
+        </th>
+        <th>Edit </th>
+        <th>Delete </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Contact)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BloodGroup)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Qty)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SDate)
+        </td>
+        <td>
+            <span class="btn btn-danger">@Html.ActionLink("Edit", "Edit", new { id = item.id }) </span></td>
+            <td>
+                <span class="btn btn-danger"> @Html.ActionLink("Delete", "Delete", new { id = item.id })</span>
+            </td>
+    </tr>
+}
+
+</table>
+
+<hr/>
+<a href="@Url.Action("Correct","Home")" class="btn btn-success" style="font-size:15px;"> Back to Main working Area </a>
+<hr/>

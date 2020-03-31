@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+            <form method="post" action="passMessage">
+                
+                <div class="form-group">
+                    <label> Enter Name </label> <br />
+                    <input type="text" name="TxtName" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <label> Enter Contact </label> <br />
+                    <input type="Number" name="TxtContact" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <label> Enter Email </label> <br />
+                    <input type="email" name="TxtEmail" class="form-control" />
+                </div>
+
+                <div class="form-group">
+                    <label> Enter Message </label> <br />
+                    <input type="text" name="TxtMessage" class="form-control" />
+                </div>
+
+                <input type="submit" value="submit" class="btn btn-danger" />
+
+            </form>
+        </div>
+        <div class="col-md-6">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d408598.8546541236!2d174.5852784679175!3d-36.862144773394114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d0d47fb5a9ce6fb%3A0x500ef6143a29917!2sAuckland%2C%20New%20Zealand!5e0!3m2!1sen!2sin!4v1584972344295!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+        </div>
+    </div>
+</div>

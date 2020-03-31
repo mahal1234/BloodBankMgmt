@@ -1,0 +1,54 @@
+﻿@model IEnumerable<BloodBankMgmt.Models.Contact>
+
+@{
+    ViewBag.Title = "AllQuery";
+}
+
+<h2 align="center">All Query</h2>
+<hr/>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Contact1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Message)
+        </th>
+      
+        <th>Delete </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Contact1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Message)
+        </td>
+        <td>
+       <span class="btn btn-danger">@Html.ActionLink("Delete", "Delete", new { id = item.id })</span>
+</td>
+    </tr>
+}
+
+</table>
+
+
+<hr/>
+
+<a href="@Url.Action("Correct","Home")" class="btn btn-success" style="font-size:20px;">Back to Main Working Area</a>

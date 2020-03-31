@@ -1,0 +1,30 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br/><br /><br />
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-6">
+            <img src="~/Images/bbm.png" class="img-thumbnail"/>
+        </div>
+
+        <div class="col-lg-6">
+            <hr />
+            <a href="@Url.Action("StaffList","Staff")" style="font-size:20px;color:white;">Staff Member </a>
+
+            <hr />
+            <a href="@Url.Action("AllDonor","Donor")" style="font-size:20px;color:white;">Donor Details </a>
+
+            <hr />
+            <a href="@Url.Action("AllBuyer","Buyer")" style="font-size:20px;color:white;">Buyer Details  </a>
+
+            <hr />
+            <a href="@Url.Action("AllQuery","Query")" style="font-size:20px;color:white;"> Query Details  </a>
+
+        </div>
+
+    </div>
+
+</div>
